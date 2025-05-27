@@ -1,0 +1,134 @@
+/* Estilos principais para o Dashboard AWS */
+
+/* Estilos de fundo e efeitos */
+.gradient-bg {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background-attachment: fixed;
+}
+
+.neon-border {
+  box-shadow: 0 0 15px rgba(59, 130, 246, 0.5);
+  border: 1px solid rgba(59, 130, 246, 0.3);
+}
+
+.neon-blue {
+  color: #60a5fa;
+  text-shadow: 0 0 10px rgba(59, 130, 246, 0.7);
+}
+
+/* Animações */
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Efeitos de hover para cards */
+.card-hover {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px rgba(59, 130, 246, 0.7);
+}
+
+/* Estilos para tooltips */
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(15, 23, 42, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  z-index: 10;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  pointer-events: none;
+  opacity: 0;
+  animation: tooltip-fade-in 0.2s ease-out forwards;
+}
+
+@keyframes tooltip-fade-in {
+  from { opacity: 0; transform: translate(-50%, 10px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+/* Estilos para o overlay de explicação */
+#explanation-overlay {
+  backdrop-filter: blur(4px);
+  transition: opacity 0.3s ease;
+}
+
+/* Estilos para botões */
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 0.375rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-danger:hover {
+  background-color: #b91c1c;
+}
+
+/* Estilos para tabelas */
+.aws-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.aws-table th {
+  background-color: rgba(30, 41, 59, 0.8);
+  color: #60a5fa;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.75rem 1rem;
+}
+
+.aws-table td {
+  background-color: rgba(30, 41, 59, 0.4);
+  padding: 0.75rem 1rem;
+  border-top: 1px solid rgba(59, 130, 246, 0.1);
+}
+
+.aws-table tr:hover td {
+  background-color: rgba(30, 41, 59, 0.6);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .aws-table {
+    display: block;
+    overflow-x: auto;
+  }
+}
