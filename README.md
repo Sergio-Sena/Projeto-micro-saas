@@ -68,7 +68,7 @@ projeto_automação/
 5.  **Configure as variáveis de ambiente**: Crie um arquivo `.env` dentro do diretório `backend/` com o seguinte conteúdo, substituindo os valores conforme necessário:
     ```dotenv
     # MongoDB Connection
-    MONGO_URI="mongodb+srv://Sergio-sena:Allsena161289@projeto-devops.0jpevmh.mongodb.net/"
+    
     # O nome do banco de dados ('projeto_devops_db') está definido em backend/app/database.py
 
     # JWT Settings
